@@ -3,35 +3,22 @@
 
 $name = $_GET["name"];
 $last_name = $_GET["last_name"];
-$n1  =  $_GET ["n1"];
-$n2  =  $_GET ["n2"];
-$op =   $_GET ["op"];
-
-
-
-
-
+$n1  =  $_GET["n1"];
+$n2  =  $_GET["n2"];
+$op =   $_GET["op"];
 
 if($op == "+"){
-
-$result = $n1 + $n2;
+    $result = $n1 + $n2;
+}else if($op == "-"){
+    $result = $n1 - $n2;
+}else if($op == "*"){
+    $result = $n1 * $n2;
+}else if($op == "/"){
+    $result = $n1 / $n2;
+}else {
+    $result = "Operação invalida. Tente novamente";
 }
-if($op == "-"){
-
-$result = $n1 - $n2;
-
-}
- if($op == "*") {
-  $result = $n1 * $n2;   
-     
- }
-  
-if($op == "/") {
-  $result = $n1 / $n2;  
-}
-
-
-?>
+    ?>
 
 <!doctype>
 
@@ -43,22 +30,14 @@ if($op == "/") {
         
     </head>
     <body>
-        
-        <h1><?php echo "$name $last_name";?> </h1>
-        <p> O resultado é: 
-            <?php
-        
-        
-             echo $result;  ?> </p>                    
-    
+        <h1><?php echo "$name $last_name";?></h1>
+        <p>O resultado é:<?php echo $result ;?></p>
     </body>
     
     
 </html>
      
-     
-
-
+               
 
 
 
